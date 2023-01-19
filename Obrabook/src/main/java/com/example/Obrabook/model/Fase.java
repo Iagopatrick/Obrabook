@@ -1,6 +1,11 @@
 package com.example.Obrabook.model;
 
-public class FaseModel {
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "fases")
+public class Fase {
+    @Id
     private int idFase;
     private String nomeDaFase;
     private int valorEsperado;
