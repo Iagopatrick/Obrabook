@@ -3,8 +3,14 @@ package com.example.Obrabook.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "clientes")
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Document(collection = "clientes")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Cliente {
     @Id
     private int idCliente;
