@@ -15,9 +15,9 @@ import lombok.NoArgsConstructor;
 
 public class Obra {
     @Id
-    private int idObra;
-    private int idCliente;
-    private int idEngenheiro;
+    private int obraId;
+    private int clienteId;
+    private int engenheiroId;
     private String nome;
     private String nomeCliente;
      

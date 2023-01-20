@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Engenheiro {
     @Id
-    private int idEngenheiro;
+    private int engenheiroId;
     private String nome;
     private String email;
     private String senha;
