@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.Obrabook.model.Engenheiro;
-import com.example.Obrabook.model.Fase;
+
 import com.example.Obrabook.service.EngenehiroService;
 
 
@@ -18,7 +18,7 @@ public class EngenheiroController {
     @Autowired
     private EngenehiroService service;
 
-    @GetMapping
+    @GetMapping("/engenheiro/{senha}")
     public Engenheiro getEngenheiro(@PathVariable int engenheiroId){
         return service.getEngenheiro(engenheiroId);
     }

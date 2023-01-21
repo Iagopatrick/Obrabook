@@ -1,5 +1,7 @@
 package com.example.Obrabook.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -10,18 +12,20 @@ import com.example.Obrabook.model.Cliente;
 import com.example.Obrabook.service.ClienteService;
 
 @RestController
-@RequestMapping("/perfil")
+@RequestMapping("/clientes")
 public class ClienteController {
-/*
- É preciso colocar um botao para cada informação no perfil, ou seja, la no perfil da pessoa é preciso aparecer
-    as informações da obra.
- */
+
    @Autowired
    private ClienteService service;
-
-
-   @GetMapping
-   public Cliente getCliente(@PathVariable int clienteId){
+   @GetMapping("/clientes/{clienteId}")
+   public Cliente getCliente(@PathVariable Long clienteId){
       return service.getClient(clienteId);
    } 
+
+   @GetMapping("/clientes")
+   public List<Cliente> getAllClients(){
+      return service.findAllClient();
+   }
+
+   
 }

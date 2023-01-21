@@ -1,0 +1,6 @@
+spring:
+    data:
+        mongodb:
+            uri : mongodb+srv://admin:admin@cluster0.lg48qxe.mongodb.net/?retryWrites=true&w=majority
+            database : ObraBook
+            
