@@ -10,13 +10,13 @@ import com.example.Obrabook.model.Fase;
 import com.example.Obrabook.service.FaseService;
 
 @RestController
-@RequestMapping("/perfil/fase")
+@RequestMapping("/fase")
 public class FaseController {
     @Autowired
     private FaseService service;
 
 
-    @GetMapping("/perfil/{nomeDaFase}")
+    @GetMapping("/fase/{nomeDaFase}")
     public Fase getFase(@PathVariable int faseId){
         return service.getFase(faseId);
     }

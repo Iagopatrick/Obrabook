@@ -23,6 +23,10 @@ public class ClienteService {
         return repository.findById(clienteId).get();
     }
 
+    public Cliente addCliente(Cliente cliente) {
+        cliente.setClienteId((long) Math.random());
+        return repository.save(cliente);
+    }
 
 
 }
