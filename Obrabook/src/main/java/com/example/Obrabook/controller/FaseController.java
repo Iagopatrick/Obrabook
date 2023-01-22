@@ -12,17 +12,17 @@ import com.example.Obrabook.model.Fase;
 import com.example.Obrabook.service.FaseService;
 
 @RestController
-@RequestMapping("/obra/fase")
+@RequestMapping("/fase")
 public class FaseController {
     @Autowired
     private FaseService service;
 
-    @GetMapping("/obra/fase")
+    @GetMapping("/fase/{idCliente}")
     public List<Fase> getAllFasesByClienteId(int clienteId){
         return service.getAllFasesByClienteId(clienteId);
     }
     
-    @GetMapping("/obra/{clienteId}/fase/{nomeDaFase}")
+    @GetMapping("/fase/{faseId}")
     public Fase getFase(@PathVariable int faseId){
         return service.getFase(faseId);
     }

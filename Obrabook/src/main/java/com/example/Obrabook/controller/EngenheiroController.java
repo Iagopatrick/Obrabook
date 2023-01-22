@@ -17,7 +17,7 @@ public class EngenheiroController {
     @Autowired
     private EngenehiroService service;
 
-    @GetMapping("/engenheiro/{senha}")
+    @GetMapping("/engenheiro/{engenheiroId}")
     public Engenheiro getEngenheiro(@PathVariable int engenheiroId){
         return service.getEngenheiro(engenheiroId);
     }

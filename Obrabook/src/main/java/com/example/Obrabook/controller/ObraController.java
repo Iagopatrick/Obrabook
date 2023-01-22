@@ -17,7 +17,7 @@ public class ObraController {
     @Autowired
     private ObraService service;
     
-    @GetMapping("/obra/{nome}")
+    @GetMapping("/obra/{obraId}")
     public Obra getObra(@PathVariable int obraId){
         return service.getObra(obraId);
     }
