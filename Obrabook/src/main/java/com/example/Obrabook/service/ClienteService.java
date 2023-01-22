@@ -19,14 +19,10 @@ public class ClienteService {
         return repository.findAll();
     }
 
-    public Cliente getClient(Long clienteId){
+    public Cliente getClient(int clienteId){
         return repository.findById(clienteId).get();
     }
 
-    public Cliente addCliente(Cliente cliente) {
-        cliente.setClienteId((long) Math.random());
-        return repository.save(cliente);
-    }
-
+    
 
 }

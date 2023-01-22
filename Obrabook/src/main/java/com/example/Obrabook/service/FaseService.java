@@ -22,4 +22,10 @@ public class FaseService {
     public Fase getFase(int faseId){
         return repository.findById(faseId).get();
     }
+
+    public List<Fase> getAllFasesByClienteId(int cleinteId){
+        return repository.findAllByClienteId(cleinteId);
+    }
+
+
 }

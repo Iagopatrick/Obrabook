@@ -1,5 +1,7 @@
 package com.example.Obrabook.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,5 +20,10 @@ public class ObraController {
     @GetMapping("/obra/{nome}")
     public Obra getObra(@PathVariable int obraId){
         return service.getObra(obraId);
+    }
+
+    @GetMapping("/obra/{clienteId}")
+    public List<Obra> getAllObrasClienteId(int clienteId){
+        return service.findByClienteId(clienteId);
     }
 }

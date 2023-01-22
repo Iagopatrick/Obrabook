@@ -13,11 +13,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Fase {
     @Id
-    private int idFase;
+    private int faseId;
     private String nomeDaFase;
     private int valorEsperado;
     private int valorAtual;
-    private int idObra;
-    private int idCliente;
-    private int idEngenheiro; 
+    private int obraId;
+    private int clienteId;
+    private int engenheiroId; 
 }

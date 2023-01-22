@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,7 +24,7 @@ public class ClienteController {
 
    @GetMapping("/clientes/{clienteId}")
    @ResponseStatus(HttpStatus.FOUND)
-   public Cliente getCliente(@PathVariable Long clienteId){
+   public Cliente getCliente(@PathVariable int clienteId){
       return service.getClient(clienteId);
    } 
 
@@ -34,11 +33,7 @@ public class ClienteController {
       return service.findAllClient();
    }
 
-   @PutMapping
-   @ResponseStatus(HttpStatus.CREATED)
-   public Cliente creatCliente(@RequestBody Cliente cliente){
-      return service.addCliente(cliente);
-   }
+   
 
    
 }

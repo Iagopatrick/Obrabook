@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Cliente {
     @Id
-    private Long clienteId;
+    private int clienteId;
     private String nome;
     private String cpf;
     private String telefone;
