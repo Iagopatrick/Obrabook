@@ -21,9 +21,7 @@ public class ObraService {
         return repository.findById(obraId).get();
     }
 
-    public List<Obra> findByClienteId(int clienteId){
-        return repository.findByClienteId(clienteId);
-    }
+    
 
     
 }

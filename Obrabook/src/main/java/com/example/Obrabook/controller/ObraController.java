@@ -12,18 +12,15 @@ import com.example.Obrabook.model.Obra;
 import com.example.Obrabook.service.ObraService;
 
 @RestController
-@RequestMapping("/obra")
+@RequestMapping("/obras")
 public class ObraController {
     @Autowired
     private ObraService service;
     
-    @GetMapping("/obra/{obraId}")
+    @GetMapping("/{obraId}")
     public Obra getObra(@PathVariable int obraId){
         return service.getObra(obraId);
     }
 
-    @GetMapping("/obra/{clienteId}")
-    public List<Obra> getAllObrasClienteId(int clienteId){
-        return service.findByClienteId(clienteId);
-    }
+    
 }

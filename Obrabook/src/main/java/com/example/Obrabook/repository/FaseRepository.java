@@ -9,5 +9,5 @@ import com.example.Obrabook.model.Fase;
 
 @Repository
 public interface FaseRepository extends MongoRepository<Fase, Integer>{
-   List<Fase> findAllByClienteId(int clienteId);
+
 }

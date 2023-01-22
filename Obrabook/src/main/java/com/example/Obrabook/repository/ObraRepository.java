@@ -9,5 +9,5 @@ import com.example.Obrabook.model.Obra;
 
 @Repository
 public interface ObraRepository extends MongoRepository<Obra, Integer>{
-    List<Obra> findByClienteId(int clienteId);
+
 }

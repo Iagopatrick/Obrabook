@@ -12,12 +12,12 @@ import com.example.Obrabook.service.EngenehiroService;
 
 
 @RestController
-@RequestMapping("/engenheiro")
+@RequestMapping("/engenheiros")
 public class EngenheiroController {
     @Autowired
     private EngenehiroService service;
 
-    @GetMapping("/engenheiro/{engenheiroId}")
+    @GetMapping("/{engenheiroId}")
     public Engenheiro getEngenheiro(@PathVariable int engenheiroId){
         return service.getEngenheiro(engenheiroId);
     }
