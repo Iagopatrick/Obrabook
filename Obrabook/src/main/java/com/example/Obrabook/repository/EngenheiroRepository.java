@@ -7,5 +7,5 @@ import com.example.Obrabook.model.Engenheiro;
 
 @Repository
 public interface EngenheiroRepository extends MongoRepository<Engenheiro, Integer> {
-    
+    Engenheiro findByEngenheiroId(int engenheiroId);
 }

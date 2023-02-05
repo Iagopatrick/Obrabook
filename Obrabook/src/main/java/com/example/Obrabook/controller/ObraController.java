@@ -2,6 +2,7 @@ package com.example.Obrabook.controller;
 
 import java.util.List;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,6 +21,8 @@ import com.example.Obrabook.service.ObraService;
 public class ObraController {
     @Autowired
     private ObraService service;
+
+    
     
     @GetMapping("/{obraId}")
     public Obra getObra(@PathVariable int obraId){
@@ -30,4 +33,9 @@ public class ObraController {
     public List<Fase> getAllFases(@PathVariable int obraId){
         return service.getFases(obraId);
     }
+
+   
+
+    
+
 }

@@ -13,8 +13,8 @@ import com.example.Obrabook.service.EngenehiroService;
 
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("/engenheiros")
+@CrossOrigin(origins = "http://localhost:3000")
 public class EngenheiroController {
     @Autowired
     private EngenehiroService service;
@@ -24,7 +24,6 @@ public class EngenheiroController {
         return service.getEngenheiro(engenheiroId);
     }
 
-    
     
     
 }
