@@ -1,0 +1,1 @@
+Trabalho realizado para disciplina de POO, no qual eu realizei uma segunda parte de um projeto que seria como uma forma de um engenheiro atualizar seus clientes sobre o andamento das suas respectivas obras. Além disso, o engenheiro poderia colocar imagens sobre essas obras e colocar documentos necessários para  as obras de forma agrupada.
